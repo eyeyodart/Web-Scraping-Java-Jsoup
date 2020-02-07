@@ -17,6 +17,7 @@ public class ScrapingKotso {
 
 	public static void main(String[] args) throws Exception {
 		
+		//Create the database
 		createNewDatabase("ScrapingDB.db");
 		
 		// SQLite connection string  
@@ -36,6 +37,7 @@ public class ScrapingKotso {
                 + " cam text NOT NULL\n"
                 + ");";  
 		
+		//Jsoup connect to the e-shop
 		final Document doc = Jsoup.connect("https://www.kotsovolos.gr/mobile-phones-gps/mobile-phones/smartphones?beginIndex=0&pageSize=372").timeout(50000).maxBodySize(0).get();
 		
 		Elements list = doc.select(".listWrap.listView .product");
