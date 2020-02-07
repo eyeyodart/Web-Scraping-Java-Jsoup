@@ -20,10 +20,10 @@ public class ScrapingKotso {
 		createNewDatabase("ScrapingDB.db");
 		
 		// SQLite connection string  
-        String url = "jdbc:sqlite:/home/evi-ubuntu/eclipse-workspace/WebScraping/ScrapingDB.db";  
+        	String url = "jdbc:sqlite:/eclipse-workspace/WebScraping/ScrapingDB.db";  
           
-        // SQL statement for creating a new table  
-        String sql = "CREATE TABLE IF NOT EXISTS products (\n"  
+        	// SQL statement for creating a new table  
+        	String sql = "CREATE TABLE IF NOT EXISTS products (\n"  
         		+ " title text NOT NULL,\n"
                 + " id integer PRIMARY KEY,\n"  
                 + " priceActual text NOT NULL,\n"
@@ -96,7 +96,7 @@ public class ScrapingKotso {
 	
 	public static void createNewDatabase(String fileName) {  
 		   
-		String url = "jdbc:sqlite:/home/evi-ubuntu/eclipse-workspace/WebScraping/" + fileName;  
+		String url = "jdbc:sqlite:/eclipse-workspace/WebScraping/" + fileName;  
    
         try {  
             Connection conn = DriverManager.getConnection(url);  
